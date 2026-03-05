@@ -39,7 +39,7 @@ GROUP BY
 SELECT
     products.productId,
     products.productname,
-    COUNT(DISTINCT order_rows.orderId) AS numberOfOrders
+    COUNT(DISTINCT order_rows.orderId) AS 'numberOfOrders'
 FROM products
 LEFT JOIN order_rows
     ON products.productId = order_rows.productId
